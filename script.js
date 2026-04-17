@@ -82,12 +82,12 @@ const menuData = [
 let currentLang = 'GR';
 
 function renderMenu() {
-    const container = document.getElementById('menu-container');
     const langBtn = document.getElementById('lang-switch');
     const callBtn = document.getElementById('call-btn');
     const headerAddr = document.getElementById('header-address');
     const footerAddr = document.getElementById('footer-address');
     const footerMobileText = document.getElementById('footer-mobile-text');
+    const container = document.getElementById('menu-container');
 
     langBtn.innerText = currentLang === 'GR' ? 'EN' : 'GR';
     callBtn.innerText = currentLang === 'GR' ? 'Καλέστε μας' : 'Call Us';
