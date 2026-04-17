@@ -85,17 +85,17 @@ function renderMenu() {
     const container = document.getElementById('menu-container');
     const langBtn = document.getElementById('lang-switch');
     const callBtn = document.getElementById('call-btn');
+    const headerAddr = document.getElementById('header-address');
     const footerAddr = document.getElementById('footer-address');
-    const footerMobile = document.getElementById('footer-mobile-text');
+    const footerMobileText = document.getElementById('footer-mobile-text');
 
-    // Αλλαγή κειμένων ανάλογα με τη γλώσσα
     langBtn.innerText = currentLang === 'GR' ? 'EN' : 'GR';
     callBtn.innerText = currentLang === 'GR' ? 'Καλέστε μας' : 'Call Us';
+    headerAddr.innerText = currentLang === 'GR' ? 'Διεύθυνση' : 'Directions';
     footerAddr.innerText = currentLang === 'GR' ? 'Σαράντα Εκκλησιών 1, Καλαμάτα' : '1 Saranta Ekklisies str, Kalamata';
-    footerMobile.innerText = currentLang === 'GR' ? 'Κινητό:' : 'Mobile:';
+    footerMobileText.innerText = currentLang === 'GR' ? 'Κινητό:' : 'Mobile:';
 
     container.innerHTML = '';
-
     menuData.forEach(cat => {
         const title = currentLang === 'GR' ? cat.category_gr : cat.category_en;
         let html = `<div class="menu-category"><h2 class="cat-title">${title}</h2><div class="menu-grid">`;
@@ -109,13 +109,11 @@ function renderMenu() {
     });
 }
 
-// Language Switch Logic
 document.getElementById('lang-switch').addEventListener('click', () => {
     currentLang = currentLang === 'GR' ? 'EN' : 'GR';
     renderMenu();
 });
 
-// Slideshow Logic
 const slides = document.querySelectorAll('.video-slide');
 let currentSlide = 0;
 function showSlide(n) {
@@ -127,5 +125,4 @@ function showSlide(n) {
 document.querySelector('.next-btn').addEventListener('click', () => showSlide(currentSlide + 1));
 document.querySelector('.prev-btn').addEventListener('click', () => showSlide(currentSlide - 1));
 
-// Αρχική εκκίνηση
 renderMenu();
