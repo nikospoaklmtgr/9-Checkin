@@ -3,42 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Name</title>
+    <title>Το Μενού μας | Our Menu</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="nav-side">
-            <a href="https://www.google.com/maps" target="_blank" id="btn-directions">Οδηγίες</a>
-            <a href="tel:+301234567890" id="btn-call">Κλήση</a>
+    <header class="main-header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo" onerror="this.style.display='none'; document.querySelector('.logo-text').style.display='block';">
+            <span class="logo-text" style="display:none; font-weight:bold; font-size:1.5rem;">ΤΟ ΜΕΝΟΥ ΜΑΣ</span>
         </div>
         
-        <div class="nav-center">
-            <img src="logo.png" alt="Logo" class="logo">
-        </div>
-
-        <div class="nav-side right">
-            <button onclick="changeLanguage('el')">GR</button> | 
-            <button onclick="changeLanguage('en')">EN</button>
+        <div class="header-right">
+            <a href="tel:+306900000000" class="phone-link">📞 Καλέστε μας</a>
+            <button id="lang-switch">EN</button>
         </div>
     </header>
 
-    <div class="slideshow-container">
-        <div class="slide fade"><img src="slide1.jpeg"></div>
-        <div class="slide fade"><img src="slide2.jpeg"></div>
-        <div class="slide fade"><img src="slide3.jpeg"></div>
-    </div>
+    <section class="slideshow">
+        <div class="video-container">
+            <video class="video-slide active" autoplay muted loop playsinline>
+                <source src="video1.mp4" type="video/mp4">
+            </video>
+            <video class="video-slide" autoplay muted loop playsinline>
+                <source src="video2.mp4" type="video/mp4">
+            </video>
+            
+            <button class="prev-btn">❮</button>
+            <button class="next-btn">❯</button>
+        </div>
+    </section>
 
     <section id="menu-section">
-        <h2 id="menu-title">Το Μενού μας</h2>
-        <div class="menu-container">
-            <div class="menu-item">
-                <p class="item-name" data-el="Χωριάτικη Σαλάτα" data-en="Greek Salad">Χωριάτικη Σαλάτα</p>
-                <p class="item-price">8€</p>
-            </div>
+        <div id="menu-container">
             </div>
     </section>
+
+    <footer style="text-align: center; padding: 40px; color: #888; font-size: 0.9rem;">
+        &copy; 2024 Your Restaurant Name. All rights reserved.
+    </footer>
 
     <script src="script.js"></script>
 </body>
