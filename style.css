@@ -1,113 +1,92 @@
-/* --- Γενικές Ρυθμίσεις & Reset --- */
+/* --- 1. Γενικές Ρυθμίσεις --- */
 * {
     box-sizing: border-box;
-    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
 }
 
-/* --- Sticky Header --- */
+/* --- 2. Header (Το "Κλειδί" για το Logo) --- */
 .main-header {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 80px; /* Σταθερό ύψος header */
-    background: rgba(255, 255, 255, 0.98);
+    height: 90px; /* Σταθερό ύψος header */
+    background: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-/* Διόρθωση μεγέθους Logo */
 .logo {
+    height: 70px;      /* Περιορίζουμε το ύψος του container */
+    width: 70px;       /* Αφού είναι 1024x1024, το κάνουμε τετράγωνο */
     display: flex;
     align-items: center;
-    max-width: 180px;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .logo img {
-    height: auto;
-    max-height: 60px; /* Περιορίζει το ύψος για να χωράει στο header */
-    width: auto;
-    object-fit: contain;
+    height: 100% !important; /* Αναγκάζουμε την εικόνα να πάρει το ύψος του container */
+    width: 100% !important;  /* Αναγκάζουμε την εικόνα να πάρει το πλάτος του container */
+    object-fit: contain;    /* Διατηρεί την αναλογία χωρίς να παραμορφώνει */
 }
 
-.logo-text {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #2c3e50;
-    letter-spacing: 1px;
-}
-
-/* Επικοινωνία στο Header */
 .header-right {
     display: flex;
     align-items: center;
+    gap: 20px;
 }
 
 .contact-info {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-right: 20px;
 }
 
 .address-link {
     text-decoration: none;
-    color: #7f8c8d;
+    color: #666;
     font-size: 0.85rem;
-    transition: 0.3s;
-}
-
-.address-link:hover {
-    color: #d35400;
 }
 
 .phone-link {
     text-decoration: none;
     color: #d35400;
     font-weight: bold;
-    font-size: 1.05rem;
-    transition: 0.3s;
+    font-size: 1.1rem;
 }
 
-.phone-link:hover {
-    color: #e67e22;
-}
-
-/* Κουμπί Γλώσσας */
 #lang-switch {
     background: #2c3e50;
     color: white;
     border: none;
-    padding: 10px 18px;
-    border-radius: 25px;
+    padding: 8px 15px;
+    border-radius: 20px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 0.9rem;
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
 #lang-switch:hover {
     background: #e67e22;
-    transform: scale(1.05);
 }
 
-/* --- Slideshow (Optimized for 720x1080) --- */
+/* --- 3. Slideshow (Optimized for 720x1080 Portrait) --- */
 .slideshow {
-    margin-top: 80px; /* Όσο το ύψος του header */
+    margin-top: 90px; /* Όσο το ύψος του header */
     width: 100%;
-    height: 85vh; /* Ύψος που αναδεικνύει το κάθετο βίντεο */
+    height: 80vh; 
     background: #000;
     display: flex;
     justify-content: center;
@@ -117,17 +96,15 @@ body {
 
 .video-container {
     height: 100%;
-    aspect-ratio: 720 / 1080; /* Διατηρεί την αναλογία των βίντεό σου */
+    aspect-ratio: 720 / 1080; /* Η αναλογία των βίντεό σου */
     position: relative;
-    background: #000;
-    box-shadow: 0 0 50px rgba(0,0,0,0.5);
 }
 
 .video-slide {
     position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Γεμίζει το container */
+    object-fit: cover;
     opacity: 0;
     transition: opacity 0.8s ease-in-out;
 }
@@ -136,139 +113,109 @@ body {
     opacity: 1;
 }
 
-/* Βέλη Slideshow */
 .prev-btn, .next-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0,0,0,0.2);
     color: white;
     border: none;
-    padding: 20px 12px;
+    padding: 15px;
     cursor: pointer;
     z-index: 10;
     font-size: 1.5rem;
-    transition: 0.3s;
 }
 
-.prev-btn:hover, .next-btn:hover {
-    background: rgba(211, 84, 0, 0.7);
-}
+.next-btn { right: 0; }
+.prev-btn { left: 0; }
 
-.next-btn { right: 0; border-radius: 5px 0 0 5px; }
-.prev-btn { left: 0; border-radius: 0 5px 5px 0; }
-
-/* --- Menu Section --- */
+/* --- 4. Menu Section --- */
 #menu-section {
-    padding: 60px 5%;
+    padding: 50px 5%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .menu-category {
-    margin-bottom: 70px;
+    margin-bottom: 50px;
 }
 
 .cat-title {
     text-align: center;
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     color: #2c3e50;
-    margin-bottom: 45px;
-    position: relative;
-    padding-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.cat-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 4px;
-    background: #d35400;
-    border-radius: 2px;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #d35400;
+    display: block;
+    padding-bottom: 10px;
 }
 
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 35px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
 }
 
 .menu-item {
     background: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
-    transition: transform 0.3s ease;
-    border-left: 5px solid transparent;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
 }
 
 .menu-item:hover {
     transform: translateY(-5px);
-    border-left: 5px solid #d35400;
 }
 
 .menu-item h3 {
-    margin: 0 0 12px 0;
     color: #d35400;
-    font-size: 1.4rem;
+    margin-bottom: 10px;
 }
 
 .menu-item p {
-    margin: 0;
-    font-size: 1rem;
     color: #666;
-    line-height: 1.5;
+    font-size: 0.95rem;
 }
 
-/* --- Footer --- */
+/* --- 5. Footer --- */
 footer {
     text-align: center;
-    padding: 60px 20px;
+    padding: 50px 20px;
     background: #2c3e50;
-    color: #ecf0f1;
-    margin-top: 60px;
-}
-
-footer p {
-    margin: 12px 0;
-    font-size: 1rem;
+    color: white;
+    margin-top: 50px;
 }
 
 .footer-link {
     color: #e67e22;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
 }
 
-.footer-link:hover {
-    color: #fff;
-    text-decoration: underline;
+footer p {
+    margin: 10px 0;
 }
 
-/* --- Mobile Responsive --- */
+/* --- 6. Mobile Adjustments --- */
 @media (max-width: 768px) {
     .main-header {
-        height: 70px;
+        height: 80px;
         padding: 0 15px;
     }
 
-    .logo img {
-        max-height: 45px;
+    .logo {
+        height: 55px;
+        width: 55px;
     }
 
     .contact-info {
-        display: none; /* Κρύβουμε τις λεπτομέρειες στο header για να χωρέσει το κινητό */
+        display: none; /* Κρύβουμε τις λεπτομέρειες στο header για χώρο */
     }
 
     .slideshow {
-        height: 65vh;
-        margin-top: 70px;
+        height: 60vh;
+        margin-top: 80px;
     }
 
     .video-container {
@@ -277,10 +224,6 @@ footer p {
     }
 
     .cat-title {
-        font-size: 1.8rem;
-    }
-
-    .menu-grid {
-        grid-template-columns: 1fr;
+        font-size: 1.7rem;
     }
 }
