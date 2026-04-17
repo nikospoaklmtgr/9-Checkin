@@ -1,23 +1,13 @@
-/* --- 1. Γενικές Ρυθμίσεις --- */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+/* --- Γενικές Ρυθμίσεις --- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f4f4f4; color: #333; line-height: 1.6; }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* --- 2. Header (Το "Κλειδί" για το Logo) --- */
+/* --- Header & Logo Fix --- */
 .main-header {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 90px; /* Σταθερό ύψος header */
+    height: 90px;
     background: white;
     display: flex;
     justify-content: space-between;
@@ -28,8 +18,8 @@ body {
 }
 
 .logo {
-    height: 70px;      /* Περιορίζουμε το ύψος του container */
-    width: 70px;       /* Αφού είναι 1024x1024, το κάνουμε τετράγωνο */
+    height: 70px;      /* Αυστηρό ύψος για το τεράστιο logo */
+    width: 70px;       /* Αφού είναι τετράγωνο 1024x1024 */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,56 +27,27 @@ body {
 }
 
 .logo img {
-    height: 100% !important; /* Αναγκάζουμε την εικόνα να πάρει το ύψος του container */
-    width: 100% !important;  /* Αναγκάζουμε την εικόνα να πάρει το πλάτος του container */
-    object-fit: contain;    /* Διατηρεί την αναλογία χωρίς να παραμορφώνει */
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: contain !important;
 }
 
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.address-link {
-    text-decoration: none;
-    color: #666;
-    font-size: 0.85rem;
-}
-
-.phone-link {
-    text-decoration: none;
-    color: #d35400;
-    font-weight: bold;
-    font-size: 1.1rem;
-}
+.header-right { display: flex; align-items: center; gap: 20px; }
+.contact-info { display: flex; flex-direction: column; align-items: flex-end; }
+.address-link { text-decoration: none; color: #666; font-size: 0.85rem; transition: 0.3s; }
+.address-link:hover { color: #d35400; }
+.phone-link { text-decoration: none; color: #d35400; font-weight: bold; font-size: 1.1rem; }
 
 #lang-switch {
-    background: #2c3e50;
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
+    background: #2c3e50; color: white; border: none; padding: 8px 15px;
+    border-radius: 20px; cursor: pointer; font-weight: bold;
 }
 
-#lang-switch:hover {
-    background: #e67e22;
-}
-
-/* --- 3. Slideshow (Optimized for 720x1080 Portrait) --- */
+/* --- Slideshow (Optimized for 720x1080) --- */
 .slideshow {
-    margin-top: 90px; /* Όσο το ύψος του header */
+    margin-top: 90px;
     width: 100%;
-    height: 80vh; 
+    height: 80vh;
     background: #000;
     display: flex;
     justify-content: center;
@@ -94,136 +55,27 @@ body {
     overflow: hidden;
 }
 
-.video-container {
-    height: 100%;
-    aspect-ratio: 720 / 1080; /* Η αναλογία των βίντεό σου */
-    position: relative;
-}
+.video-container { height: 100%; aspect-ratio: 720 / 1080; position: relative; }
+.video-slide { position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.8s; }
+.video-slide.active { opacity: 1; }
+.prev-btn, .next-btn { position: absolute; top: 50%; background: rgba(0,0,0,0.2); color: white; border: none; padding: 15px; cursor: pointer; z-index: 10; }
+.next-btn { right: 0; } .prev-btn { left: 0; }
 
-.video-slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 0.8s ease-in-out;
-}
+/* --- Menu --- */
+#menu-section { padding: 50px 5%; max-width: 1200px; margin: 0 auto; }
+.cat-title { text-align: center; font-size: 2.2rem; color: #2c3e50; margin-bottom: 30px; border-bottom: 3px solid #d35400; padding-bottom: 10px; }
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+.menu-item { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.menu-item h3 { color: #d35400; margin-bottom: 5px; }
 
-.video-slide.active {
-    opacity: 1;
-}
+/* --- Footer --- */
+footer { text-align: center; padding: 50px 20px; background: #2c3e50; color: white; margin-top: 50px; }
+.footer-link { color: #e67e22; text-decoration: none; font-weight: bold; }
 
-.prev-btn, .next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.2);
-    color: white;
-    border: none;
-    padding: 15px;
-    cursor: pointer;
-    z-index: 10;
-    font-size: 1.5rem;
-}
-
-.next-btn { right: 0; }
-.prev-btn { left: 0; }
-
-/* --- 4. Menu Section --- */
-#menu-section {
-    padding: 50px 5%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.menu-category {
-    margin-bottom: 50px;
-}
-
-.cat-title {
-    text-align: center;
-    font-size: 2.2rem;
-    color: #2c3e50;
-    margin-bottom: 30px;
-    border-bottom: 3px solid #d35400;
-    display: block;
-    padding-bottom: 10px;
-}
-
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-}
-
-.menu-item {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    transition: transform 0.2s;
-}
-
-.menu-item:hover {
-    transform: translateY(-5px);
-}
-
-.menu-item h3 {
-    color: #d35400;
-    margin-bottom: 10px;
-}
-
-.menu-item p {
-    color: #666;
-    font-size: 0.95rem;
-}
-
-/* --- 5. Footer --- */
-footer {
-    text-align: center;
-    padding: 50px 20px;
-    background: #2c3e50;
-    color: white;
-    margin-top: 50px;
-}
-
-.footer-link {
-    color: #e67e22;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer p {
-    margin: 10px 0;
-}
-
-/* --- 6. Mobile Adjustments --- */
+/* --- Mobile --- */
 @media (max-width: 768px) {
-    .main-header {
-        height: 80px;
-        padding: 0 15px;
-    }
-
-    .logo {
-        height: 55px;
-        width: 55px;
-    }
-
-    .contact-info {
-        display: none; /* Κρύβουμε τις λεπτομέρειες στο header για χώρο */
-    }
-
-    .slideshow {
-        height: 60vh;
-        margin-top: 80px;
-    }
-
-    .video-container {
-        width: 100%;
-        aspect-ratio: auto;
-    }
-
-    .cat-title {
-        font-size: 1.7rem;
-    }
+    .main-header { height: 80px; }
+    .logo { height: 55px; width: 55px; }
+    .contact-info { display: none; }
+    .slideshow { height: 60vh; }
 }
