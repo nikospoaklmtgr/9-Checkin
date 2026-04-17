@@ -6,7 +6,7 @@ const menuData = [
             { name_gr: "Ντάκος", name_en: "Dakos", desc_gr: "Παραδοσιακό κρητικό πιάτο με παξιμάδι, ντομάτα, φέτα και ρίγανη.", desc_en: "Traditional Cretan dish with barley rusk, tomato, feta cheese, and oregano." },
             { name_gr: "Οέστε", name_en: "Oeste", desc_gr: "Ντομάτα, ψητές πιπεριές Φλωρίνης, κρεμμύδι και τριμένη φέτα.", desc_en: "Tomato, roasted Florina peppers, onion, and crumbled feta cheese." },
             { name_gr: "Καίσαρα Με Κοτόπουλο", name_en: "Chicken Caesar", desc_gr: "Δροσερή σαλάτα με μαρούλι, κοτόπουλο, κρούτον και σος Καίσαρα.", desc_en: "Refreshing salad with lettuce, chicken, croutons, and Caesar sauce." },
-            { name_gr: "Χόρτα", name_en: "Boiled Greens", desc_gr: "Βραστά χόρτα με λεμόνι και ελαιόλαδο - απλό και θρεπτικό.", desc_en: "Seasonal boiled greens with lemon and olive oil." }
+            { name_gr: "Χόρτα", name_en: "Boiled Greens", desc_gr: "Βραστά χόρτα με λεμόνι και ελαιόλαδο.", desc_en: "Seasonal boiled greens with lemon and olive oil." }
         ]
     },
     {
@@ -22,7 +22,7 @@ const menuData = [
         items: [
             { name_gr: "Πατάτες Τηγανητές", name_en: "French Fries", desc_gr: "Τραγανές και νόστιμες τηγανητές πατάτες.", desc_en: "Crispy and delicious fried potatoes." },
             { name_gr: "Ρεβυθοκεφτέδες", name_en: "Chickpea Fritters", desc_gr: "Συνοδεύεται με σως τζατζίκι.", desc_en: "Chickpea fritters served with tzatziki sauce." },
-            { name_gr: "Κολοκυθοκεφτέδες", name_en: "Zucchini Fritters", desc_gr: "Κεφτέδες από φρέσκο κολοκύθι. Συνοδεύεται με σως τζατζίκι.", desc_en: "Fresh zucchini fritters. Served with tzatziki sauce." },
+            { name_gr: "Κολοκυθοκεφτέδες", name_en: "Zucchini Fritters", desc_gr: "Κεφτέδες από φρέσκο κολοκύθι. Με σως τζατζίκι.", desc_en: "Fresh zucchini fritters. Served with tzatziki sauce." },
             { name_gr: "Μελιτζάνες Τηγανητές", name_en: "Fried Eggplants", desc_gr: "Τραγανές σε κουρκούτι μπύρας.", desc_en: "Crispy fried eggplants in beer batter." },
             { name_gr: "Κολοκυθάκια Τηγανητά", name_en: "Fried Zucchini", desc_gr: "Τραγανές φέτες κολοκυθιού σε κουρκούτι μπύρας.", desc_en: "Crispy fried zucchini slices in beer batter." },
             { name_gr: "Κεφτεδάκια", name_en: "Meatballs", desc_gr: "Τραγανά εξωτερικά και ζουμερά εσωτερικά. Με πατάτες.", desc_en: "Crispy outside and juicy inside. Served with fries." }
@@ -31,7 +31,7 @@ const menuData = [
     {
         category_gr: "Τυριά", category_en: "Cheeses",
         items: [
-            { name_gr: "Φέτα", name_en: "Feta Cheese", desc_gr: "Αυθεντική φέτα από πρόβειο γάλα, αλμυρή και πλούσια.", desc_en: "Traditional sheep's milk feta cheese." },
+            { name_gr: "Φέτα", name_en: "Feta Cheese", desc_gr: "Αυθεντική φέτα από πρόβειο γάλα.", desc_en: "Traditional sheep's milk feta cheese." },
             { name_gr: "Τυροκροκέτες", name_en: "Cheese Croquettes", desc_gr: "Με λιωμένο τυρί. Συνοδεύεται με μαρμελάδα ντομάτας.", desc_en: "Cheese croquettes served with tomato jam." },
             { name_gr: "Κεφαλοτύρι Σαγανάκι", name_en: "Kefalotyri Saganaki", desc_gr: "Τηγανισμένο κεφαλοτύρι, χρυσαφένιο και τραγανό.", desc_en: "Fried kefalotyri cheese, golden and crispy." },
             { name_gr: "Φέτα Σαγανάκι", name_en: "Feta Saganaki", desc_gr: "Σε τραγανό φύλλο, με μέλι και σουσάμι.", desc_en: "Feta wrapped in crispy phyllo with honey and sesame." }
@@ -59,7 +59,6 @@ const menuData = [
             { name_gr: "Ψαρονέφρι", name_en: "Pork Tenderloin", desc_gr: "Στη σχάρα, με πατάτες ή ψητά λαχανικά.", desc_en: "Grilled pork tenderloin." },
             { name_gr: "Πανσετάκια", name_en: "Pork Belly Slices", desc_gr: "Τρυφερά και ζουμερά κομμάτια χοιρινού.", desc_en: "Tender and juicy pork belly slices." },
             { name_gr: "Μπιφτέκι Μοσχαρίσιο", name_en: "Beef Burger", desc_gr: "Αφράτο μπιφτέκι από 100% μοσχαρίσιο κιμά.", desc_en: "Fluffy 100% ground beef burger patty." },
-            { name_gr: "Σνίτσελ", name_en: "Schnitzel", desc_gr: "Κοτόπουλο ή χοιρινό παναρισμένο με Panko.", desc_en: "Breaded schnitzel with Panko." },
             { name_gr: "Λουκάνικο Καλαμάτας", name_en: "Kalamata Sausage", desc_gr: "Με πορτοκάλι. Συνοδεύεται από πατάτες.", desc_en: "Traditional sausage with orange." },
             { name_gr: "Κοτόπουλο Σουβλάκι", name_en: "Chicken Souvlaki", desc_gr: "Μαριναρισμένο σε μυρωδικά. Με πατάτες.", desc_en: "Marinated chicken skewers." }
         ]
@@ -87,10 +86,12 @@ let currentLang = 'GR';
 function renderMenu() {
     const container = document.getElementById('menu-container');
     const langBtn = document.getElementById('lang-switch');
+    const callBtn = document.getElementById('call-btn');
     
-    if(!container || !langBtn) return;
-
+    // Αλλαγή γλώσσας στο κουμπί και στο "Καλέστε μας"
     langBtn.innerText = currentLang === 'GR' ? 'EN' : 'GR';
+    callBtn.innerText = currentLang === 'GR' ? 'Καλέστε μας' : 'Call Us';
+
     container.innerHTML = '';
 
     menuData.forEach(cat => {
@@ -117,13 +118,13 @@ function renderMenu() {
     });
 }
 
-// Language Switch
+// Language Switch Event
 document.getElementById('lang-switch').addEventListener('click', () => {
     currentLang = currentLang === 'GR' ? 'EN' : 'GR';
     renderMenu();
 });
 
-// Slideshow
+// Slideshow Logic
 const slides = document.querySelectorAll('.video-slide');
 let currentSlide = 0;
 
@@ -134,11 +135,8 @@ function showSlide(n) {
     slides[currentSlide].classList.add('active');
 }
 
-const nextBtn = document.querySelector('.next-btn');
-const prevBtn = document.querySelector('.prev-btn');
+document.querySelector('.next-btn').addEventListener('click', () => showSlide(currentSlide + 1));
+document.querySelector('.prev-btn').addEventListener('click', () => showSlide(currentSlide - 1));
 
-if(nextBtn) nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
-if(prevBtn) prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
-
-// Initial render
+// Εκκίνηση
 renderMenu();
