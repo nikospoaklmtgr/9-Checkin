@@ -2,10 +2,10 @@ const menuData = [
     {
         category_gr: "Σαλάτες", category_en: "Salads",
         items: [
-            { name_gr: "Χωριάτικη", name_en: "Greek Salad", desc_gr: "Κλασική ελληνική σαλάτα με ντομάτα, κρεμμύδι, αγγούρι, φέτα, ελιά και ρίγανη.", desc_en: "Classic Greek salad with tomato, onion, cucumber, feta cheese, olives, and oregano." },
-            { name_gr: "Ντάκος", name_en: "Dakos", desc_gr: "Παραδοσιακό κρητικό πιάτο με παξιμάδι, ντομάτα, φέτα και ρίγανη.", desc_en: "Traditional Cretan dish with barley rusk, tomato, feta cheese, and oregano." },
-            { name_gr: "Οέστε", name_en: "Oeste", desc_gr: "Ντομάτα, ψητές πιπεριές Φλωρίνης, κρεμμύδι και τριμένη φέτα.", desc_en: "Tomato, roasted Florina peppers, onion, and crumbled feta cheese." },
-            { name_gr: "Καίσαρα Με Κοτόπουλο", name_en: "Chicken Caesar", desc_gr: "Δροσερή σαλάτα με μαρούλι, κοτόπουλο, κρούτον και σος Καίσαρα.", desc_en: "Refreshing salad with lettuce, chicken, croutons, and Caesar sauce." },
+            { name_gr: "Χωριάτικη", name_en: "Greek Salad", desc_gr: "Ντομάτα, κρεμμύδι, αγγούρι, φέτα, ελιά και ρίγανη.", desc_en: "Tomato, onion, cucumber, feta cheese, olives, and oregano." },
+            { name_gr: "Ντάκος", name_en: "Dakos", desc_gr: "Παξιμάδι, ντομάτα, φέτα και ρίγανη.", desc_en: "Barley rusk, tomato, feta cheese, and oregano." },
+            { name_gr: "Οέστε", name_en: "Oeste", desc_gr: "Ντομάτα, ψητές πιπεριές Φλωρίνης, κρεμμύδι και τριμένη φέτα.", desc_en: "Tomato, roasted Florina peppers, onion, and crumbled feta." },
+            { name_gr: "Καίσαρα Με Κοτόπουλο", name_en: "Chicken Caesar", desc_gr: "Μαρούλι, κοτόπουλο, κρούτον και σος Καίσαρα.", desc_en: "Lettuce, chicken, croutons, and Caesar sauce." },
             { name_gr: "Χόρτα", name_en: "Boiled Greens", desc_gr: "Βραστά χόρτα με λεμόνι και ελαιόλαδο.", desc_en: "Seasonal boiled greens with lemon and olive oil." }
         ]
     },
@@ -13,7 +13,7 @@ const menuData = [
         category_gr: "Αλοιφές", category_en: "Dips",
         items: [
             { name_gr: "Τυροκαυτερή", name_en: "Tyrokauteri", desc_gr: "Πικάντικη κρέμα με φέτα και καυτερή πιπεριά.", desc_en: "Spicy feta cheese spread with hot peppers." },
-            { name_gr: "Τζατζίκι", name_en: "Tzatziki", desc_gr: "Δροσερή σάλτσα με γιαούρτι, αγγούρι και σκόρδο.", desc_en: "Cool yogurt sauce with cucumber and garlic." },
+            { name_gr: "Τζατζίκι", name_en: "Tzatziki", desc_gr: "Γιαούρτι, αγγούρι και σκόρδο.", desc_en: "Yogurt, cucumber, and garlic." },
             { name_gr: "Μελιτζανοσαλάτα", name_en: "Eggplant Dip", desc_gr: "Καπνιστή σαλάτα από ψητή μελιτζάνα.", desc_en: "Smoky roasted eggplant dip." }
         ]
     },
@@ -21,62 +21,62 @@ const menuData = [
         category_gr: "Ορεκτικά", category_en: "Appetizers",
         items: [
             { name_gr: "Πατάτες Τηγανητές", name_en: "French Fries", desc_gr: "Τραγανές και νόστιμες τηγανητές πατάτες.", desc_en: "Crispy and delicious fried potatoes." },
-            { name_gr: "Ρεβυθοκεφτέδες", name_en: "Chickpea Fritters", desc_gr: "Συνοδεύεται με σως τζατζίκι.", desc_en: "Chickpea fritters served with tzatziki sauce." },
-            { name_gr: "Κολοκυθοκεφτέδες", name_en: "Zucchini Fritters", desc_gr: "Κεφτέδες από φρέσκο κολοκύθι. Με σως τζατζίκι.", desc_en: "Fresh zucchini fritters. Served with tzatziki sauce." },
+            { name_gr: "Ρεβυθοκεφτέδες", name_en: "Chickpea Fritters", desc_gr: "Συνοδεύεται με σως τζατζίκι.", desc_en: "Served with tzatziki sauce." },
+            { name_gr: "Κολοκυθοκεφτέδες", name_en: "Zucchini Fritters", desc_gr: "Κεφτέδες από φρέσκο κολοκύθι με σως τζατζίκι.", desc_en: "Fresh zucchini fritters with tzatziki sauce." },
             { name_gr: "Μελιτζάνες Τηγανητές", name_en: "Fried Eggplants", desc_gr: "Τραγανές σε κουρκούτι μπύρας.", desc_en: "Crispy fried eggplants in beer batter." },
-            { name_gr: "Κολοκυθάκια Τηγανητά", name_en: "Fried Zucchini", desc_gr: "Τραγανές φέτες κολοκυθιού σε κουρκούτι μπύρας.", desc_en: "Crispy fried zucchini slices in beer batter." },
-            { name_gr: "Κεφτεδάκια", name_en: "Meatballs", desc_gr: "Τραγανά εξωτερικά και ζουμερά εσωτερικά. Με πατάτες.", desc_en: "Crispy outside and juicy inside. Served with fries." }
+            { name_gr: "Κολοκυθάκια Τηγανητά", name_en: "Fried Zucchini", desc_gr: "Τραγανές φέτες κολοκυθιού σε κουρκούτι μπύρας.", desc_en: "Crispy fried zucchini in beer batter." },
+            { name_gr: "Κεφτεδάκια", name_en: "Meatballs", desc_gr: "Τραγανά κεφτεδάκια με τηγανητές πατάτες.", desc_en: "Crispy meatballs served with fries." }
         ]
     },
     {
         category_gr: "Τυριά", category_en: "Cheeses",
         items: [
-            { name_gr: "Φέτα", name_en: "Feta Cheese", desc_gr: "Αυθεντική φέτα από πρόβειο γάλα.", desc_en: "Traditional sheep's milk feta cheese." },
-            { name_gr: "Τυροκροκέτες", name_en: "Cheese Croquettes", desc_gr: "Με λιωμένο τυρί. Συνοδεύεται με μαρμελάδα ντομάτας.", desc_en: "Cheese croquettes served with tomato jam." },
+            { name_gr: "Φέτα", name_en: "Feta Cheese", desc_gr: "Αυθεντική ελληνική φέτα.", desc_en: "Authentic Greek feta cheese." },
+            { name_gr: "Τυροκροκέτες", name_en: "Cheese Croquettes", desc_gr: "Λιωμένα τυριά με μαρμελάδα ντομάτας.", desc_en: "Melted cheeses served with tomato jam." },
             { name_gr: "Κεφαλοτύρι Σαγανάκι", name_en: "Kefalotyri Saganaki", desc_gr: "Τηγανισμένο κεφαλοτύρι, χρυσαφένιο και τραγανό.", desc_en: "Fried kefalotyri cheese, golden and crispy." },
-            { name_gr: "Φέτα Σαγανάκι", name_en: "Feta Saganaki", desc_gr: "Σε τραγανό φύλλο, με μέλι και σουσάμι.", desc_en: "Feta wrapped in crispy phyllo with honey and sesame." }
+            { name_gr: "Φέτα Σαγανάκι", name_en: "Feta Saganaki", desc_gr: "Σε τραγανό φύλλο, με μέλι και σουσάμι.", desc_en: "Feta in crispy phyllo with honey and sesame." }
         ]
     },
     {
         category_gr: "Θαλασσινά", category_en: "Seafood",
         items: [
-            { name_gr: "Γαρίδες Σχάρας", name_en: "Grilled Shrimps", desc_gr: "8 Γαρίδες ψημένες στη σχάρα.", desc_en: "8 Grilled shrimps." },
+            { name_gr: "Γαρίδες Σχάρας", name_en: "Grilled Shrimps", desc_gr: "8 Γαρίδες ψημένες στη σχάρα.", desc_en: "8 Large grilled shrimps." },
             { name_gr: "Καλαμάρι Τηγανητό", name_en: "Fried Calamari", desc_gr: "Τραγανό και αφράτο καλαμάρι.", desc_en: "Crispy and tender fried calamari." },
-            { name_gr: "Χταπόδι Ψητό", name_en: "Grilled Octopus", desc_gr: "Μαλακό και ζουμερό χταπόδι στα κάρβουνα.", desc_en: "Tender grilled octopus." },
+            { name_gr: "Χταπόδι Ψητό", name_en: "Grilled Octopus", desc_gr: "Μαλακό χταπόδι στα κάρβουνα.", desc_en: "Tender grilled octopus." },
             { name_gr: "Χταπόδι Ξυδάτο", name_en: "Marinated Octopus", desc_gr: "Μαριναρισμένο σε ξίδι και αρωματικά.", desc_en: "Octopus marinated in vinegar." },
-            { name_gr: "Μύδια Σχάρας", name_en: "Grilled Mussels", desc_gr: "Μύδια ψημένα στη σχάρα.", desc_en: "Fresh grilled mussels." },
-            { name_gr: "Γαύρος", name_en: "Fried Anchovies", desc_gr: "Φρέσκος και νόστιμος τηγανητός γαύρος.", desc_en: "Fresh fried anchovies." },
-            { name_gr: "Γαύρος Μαρινάτος", name_en: "Marinated Anchovies", desc_gr: "Με ελαιόλαδο, ξίδι και αρωματικά.", desc_en: "Marinated anchovies." },
-            { name_gr: "Σαρδέλα", name_en: "Sardines", desc_gr: "Φρέσκες σαρδέλες, τηγανητές ή ψητές.", desc_en: "Fresh sardines." },
-            { name_gr: "Η Ψαριά Του Ψαρά", name_en: "Catch of the Day", desc_gr: "Φρέσκα ψάρια ημέρας. Ρωτήστε μας!", desc_en: "Fresh fish of the day." }
+            { name_gr: "Μύδια Σχάρας", name_en: "Grilled Mussels", desc_gr: "Φρέσκα μύδια ψημένα στη σχάρα.", desc_en: "Freshly grilled mussels." },
+            { name_gr: "Γαύρος Τηγανητός", name_en: "Fried Anchovies", desc_gr: "Φρέσκος τηγανητός γαύρος.", desc_en: "Freshly fried anchovies." },
+            { name_gr: "Γαύρος Μαρινάτος", name_en: "Marinated Anchovies", desc_gr: "Με ελαιόλαδο και ξίδι.", desc_en: "Anchovies in olive oil and vinegar." },
+            { name_gr: "Σαρδέλα", name_en: "Sardines", desc_gr: "Φρέσκες σαρδέλες σχάρας ή τηγανητές.", desc_en: "Fresh sardines grilled or fried." },
+            { name_gr: "Ψάρι Ημέρας", name_en: "Catch of the Day", desc_gr: "Φρέσκα ψάρια. Ρωτήστε μας!", desc_en: "Fresh fish. Ask us for more details!" }
         ]
     },
     {
         category_gr: "Κρεατικά", category_en: "Meat Dishes",
         items: [
-            { name_gr: "Κοτόπουλο Φιλέτο", name_en: "Chicken Fillet", desc_gr: "Ζουμερό φιλέτο με πατάτες ή λαχανικά.", desc_en: "Juicy chicken fillet with fries." },
-            { name_gr: "Μπριζόλα Χοιρινή", name_en: "Pork Chop", desc_gr: "Καλοψημένη με πατάτες ή ψητά λαχανικά.", desc_en: "Grilled pork chop." },
-            { name_gr: "Ψαρονέφρι", name_en: "Pork Tenderloin", desc_gr: "Στη σχάρα, με πατάτες ή ψητά λαχανικά.", desc_en: "Grilled pork tenderloin." },
-            { name_gr: "Πανσετάκια", name_en: "Pork Belly Slices", desc_gr: "Τρυφερά και ζουμερά κομμάτια χοιρινού.", desc_en: "Tender and juicy pork belly slices." },
-            { name_gr: "Μπιφτέκι Μοσχαρίσιο", name_en: "Beef Burger", desc_gr: "Αφράτο μπιφτέκι από 100% μοσχαρίσιο κιμά.", desc_en: "Fluffy 100% ground beef burger patty." },
-            { name_gr: "Λουκάνικο Καλαμάτας", name_en: "Kalamata Sausage", desc_gr: "Με πορτοκάλι. Συνοδεύεται από πατάτες.", desc_en: "Traditional sausage with orange." },
-            { name_gr: "Κοτόπουλο Σουβλάκι", name_en: "Chicken Souvlaki", desc_gr: "Μαριναρισμένο σε μυρωδικά. Με πατάτες.", desc_en: "Marinated chicken skewers." }
+            { name_gr: "Κοτόπουλο Φιλέτο", name_en: "Chicken Fillet", desc_gr: "Ζουμερό φιλέτο με πατάτες ή λαχανικά.", desc_en: "Juicy chicken fillet with fries or veggies." },
+            { name_gr: "Μπριζόλα Χοιρινή", name_en: "Pork Chop", desc_gr: "Καλοψημένη με πατάτες.", desc_en: "Grilled pork chop with fries." },
+            { name_gr: "Ψαρονέφρι", name_en: "Pork Tenderloin", desc_gr: "Στη σχάρα με πατάτες.", desc_en: "Grilled tenderloin with fries." },
+            { name_gr: "Πανσετάκια", name_en: "Pork Belly", desc_gr: "Τρυφερά πανσετάκια σχάρας.", desc_en: "Tender grilled pork belly slices." },
+            { name_gr: "Μπιφτέκι Μοσχαρίσιο", name_en: "Beef Burger", desc_gr: "100% μοσχαρίσιο κιμά με πατάτες.", desc_en: "100% ground beef patty with fries." },
+            { name_gr: "Λουκάνικο Καλαμάτας", name_en: "Kalamata Sausage", desc_gr: "Με πορτοκάλι και πατάτες.", desc_en: "Local sausage with orange and fries." },
+            { name_gr: "Κοτόπουλο Σουβλάκι", name_en: "Chicken Souvlaki", desc_gr: "Μαριναρισμένο με πατάτες.", desc_en: "Marinated chicken skewers with fries." }
         ]
     },
     {
         category_gr: "Ζυμαρικά", category_en: "Pasta",
         items: [
-            { name_gr: "Γαριδομακαρονάδα", name_en: "Shrimp Pasta", desc_gr: "Σπαγγέτι με 6 γαρίδες σε πικάντικη σάλτσα ντομάτας.", desc_en: "Spaghetti with 6 shrimps." },
-            { name_gr: "Κοτόπουλο Αλα Κρεμ", name_en: "Chicken A La Creme", desc_gr: "Με κρεμώδη σάλτσα, μανιτάρια και παρμεζάνα.", desc_en: "Chicken in a creamy sauce." },
-            { name_gr: "Καρμπονάρα", name_en: "Carbonara", desc_gr: "Με κρεμώδη σάλτσα, παρμεζάνα και μπέικον.", desc_en: "Creamy sauce with bacon." },
-            { name_gr: "Ναπολιτάν", name_en: "Napolitain", desc_gr: "Σπαγγέτι με πλούσια σάλτσα ντομάτας.", desc_en: "Spaghetti with tomato sauce." }
+            { name_gr: "Γαριδομακαρονάδα", name_en: "Shrimp Pasta", desc_gr: "Σπαγγέτι με γαρίδες σε σάλτσα ντομάτας.", desc_en: "Spaghetti with shrimps in tomato sauce." },
+            { name_gr: "Κοτόπουλο Αλα Κρεμ", name_en: "Chicken A La Creme", desc_gr: "Με κρέμα γάλακτος και μανιτάρια.", desc_en: "Creamy chicken with mushrooms." },
+            { name_gr: "Καρμπονάρα", name_en: "Carbonara", desc_gr: "Με μπέικον και κρέμα παρμεζάνας.", desc_en: "With bacon and parmesan cream." },
+            { name_gr: "Ναπολιτάν", name_en: "Napolitain", desc_gr: "Σπαγγέτι με σάλτσα ντομάτας.", desc_en: "Spaghetti with tomato sauce." }
         ]
     },
     {
-        category_gr: "Μεζέδες", category_en: "Platters",
+        category_gr: "Ποικιλίες", category_en: "Platters",
         items: [
-            { name_gr: "Mix Grill", name_en: "Mix Grill Platter", desc_gr: "Μπιφτέκι, πανσέτα, λουκάνικο, κεμπάπ, κοτόπουλο και πατάτες.", desc_en: "Assorted meats platter." },
-            { name_gr: "Ποικιλία Θαλασσινών", name_en: "Seafood Platter", desc_gr: "Γαρίδες, μύδια, καλαμαράκια, χταπόδι και πατάτες.", desc_en: "Seafood variety platter." }
+            { name_gr: "Mix Grill", name_en: "Mix Grill", desc_gr: "Ποικιλία κρεατικών με πατάτες.", desc_en: "Assorted grilled meats with fries." },
+            { name_gr: "Ποικιλία Θαλασσινών", name_en: "Seafood Platter", desc_gr: "Ποικιλία θαλασσινών με πατάτες.", desc_en: "Assorted seafood with fries." }
         ]
     }
 ];
@@ -88,7 +88,7 @@ function renderMenu() {
     const langBtn = document.getElementById('lang-switch');
     const callBtn = document.getElementById('call-btn');
     
-    // Αλλαγή γλώσσας στο κουμπί και στο "Καλέστε μας"
+    // Εναλλαγή κειμένων Header
     langBtn.innerText = currentLang === 'GR' ? 'EN' : 'GR';
     callBtn.innerText = currentLang === 'GR' ? 'Καλέστε μας' : 'Call Us';
 
@@ -118,13 +118,13 @@ function renderMenu() {
     });
 }
 
-// Language Switch Event
+// Language Toggle
 document.getElementById('lang-switch').addEventListener('click', () => {
     currentLang = currentLang === 'GR' ? 'EN' : 'GR';
     renderMenu();
 });
 
-// Slideshow Logic
+// Slideshow Control
 const slides = document.querySelectorAll('.video-slide');
 let currentSlide = 0;
 
@@ -138,5 +138,5 @@ function showSlide(n) {
 document.querySelector('.next-btn').addEventListener('click', () => showSlide(currentSlide + 1));
 document.querySelector('.prev-btn').addEventListener('click', () => showSlide(currentSlide - 1));
 
-// Εκκίνηση
+// Initial Execution
 renderMenu();
